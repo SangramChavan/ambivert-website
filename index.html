@@ -131,7 +131,8 @@ section { padding-block: clamp(64px, 10vw, 112px); }
 .brands { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 48px; }
 .brand-card { display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; text-decoration: none; transition: border-color .2s ease; }
 .brand-card:hover { border-color: var(--accent); }
-.brand-card:nth-child(3) { grid-column: 1 / -1; }
+.brand-card .mark { width: 120px; height: 120px; border-radius: 10px; background: var(--dark); color: var(--accent); display: grid; place-items: center; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; }
+.row .addr { word-break: normal; line-height: 1.5; }
 .brand-card img { width: 120px; height: 120px; object-fit: contain; border-radius: 10px; background: #fff; }
 .brand-card h3 { font-size: 26px; }
 .brand-card p { margin-top: 8px; font-size: 15px; }
@@ -425,6 +426,14 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
             <span class="mono">tapinhere.com</span>
           </div>
         </a>
+        <div class="brand-card">
+          <div class="mark" aria-hidden="true">EtherX</div>
+          <div>
+            <h3>EtherX</h3>
+            <p>PROFINET connectors and other industrial connectors.</p>
+            <span class="mono">Industrial connectors</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -497,10 +506,10 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
       </div>
       <div class="contact-list">
         <div class="row"><div><span class="label">Website</span><strong>ambiverttech.com</strong></div><a class="btn" href="https://ambiverttech.com" target="_blank" rel="noopener">Visit</a></div>
-        <div class="row"><div><span class="label">Email</span><strong>sangramchavan16@gmail.com</strong></div><button class="copy-btn" type="button" data-copy="sangramchavan16@gmail.com">Copy</button></div>
+        <div class="row"><div><span class="label">Email</span><strong>sangram@ambiverttech.com</strong></div><button class="copy-btn" type="button" data-copy="sangram@ambiverttech.com">Copy</button></div>
         <div class="row"><div><span class="label">Phone</span><strong>+91 99601 60016</strong></div><button class="copy-btn" type="button" data-copy="+919960160016">Copy</button></div>
         <div class="row"><div><span class="label">WhatsApp</span><strong>+91 99601 60016</strong></div><a class="btn" href="https://wa.me/919960160016" target="_blank" rel="noopener">Message</a></div>
-        <div class="row"><div><span class="label">Location</span><strong>Pune, India</strong></div></div>
+        <div class="row"><div><span class="label">Address</span><strong class="addr">Ambivert Technologies Private Limited<br>Excellaa Plazzo, A107, near Bharat Petrol Pump<br>opp. Deccan Pavillion Hotel, Ambegaon Budruk<br>Pune, Maharashtra 411046</strong></div><button class="copy-btn" type="button" data-copy="Ambivert Technologies Private Limited, Excellaa Plazzo, A107, near Bharat Petrol Pump, opp. Deccan Pavillion Hotel, Ambegaon Budruk, Pune, Maharashtra 411046">Copy</button></div>
       </div>
     </div>
   </section>
