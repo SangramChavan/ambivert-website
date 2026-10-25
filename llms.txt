@@ -1,0 +1,25 @@
+# Ambivert Technologies
+
+> Ambivert Technologies Private Limited is an electronics company in Pune, India. It offers PCB prototyping, component sourcing and assembly services for hardware startups, and makes the Autoemx PLC.
+
+## Services
+- PCB prototyping: schematic and PCB layout, feasibility studies, proof-of-concept builds, rapid prototyping in-house.
+- Component sourcing: components supplier LCSC, inventory planning, vendor management.
+- Assembly: SMT assembly lines, quality checks, final assembly. Manufacturing partner: JLCPCB.
+- IIoT integration.
+
+## Products
+- Autoemx PLC: programmable logic controller with a 2.8 inch capacitive touch HMI, on-device ladder editor, OpenPLC (IEC 61131-3) support, 8 digital inputs, 6 relay outputs, I2C, SD and USB expansion, over-the-air updates, DIN rail mounting. Starting price: INR 16,999.
+- ESP32-S3 development kit with built-in LiPo battery.
+
+## Brands
+- CktHub (https://ckthub.com): standalone hardware that replaces subscription software.
+- Ntagz (https://ntagz.com): NFC and RFID hardware for businesses.
+- Tapinhere (https://tapinhere.com): digital profiles shared by NFC tap or QR code.
+- EtherX: PROFINET connectors and other industrial connectors.
+
+## Contact
+- Website: https://ambiverttech.com/
+- Email: sangram@ambiverttech.com
+- Phone and WhatsApp: +91 99601 60016
+- Address: Excellaa Plazzo, A107, near Bharat Petrol Pump, opp. Deccan Pavillion Hotel, Ambegaon Budruk, Pune, Maharashtra 411046, India
