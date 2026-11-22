@@ -484,9 +484,19 @@ add(pcb,V(-58.6,0,-5.8),V(10,-66,-6),'Control PCB',V(28,0,0));
 // ferrite plate on top of the coil centre
 const ferrite=new THREE.Mesh(new THREE.CylinderGeometry(9.5,9.5,1.4,64),new THREE.MeshStandardMaterial({color:0x3a3a3a,roughness:.85,metalness:.05}));
 ferrite.rotation.x=Math.PI/2;add(ferrite,V(HC.x,HC.y,4.9),V(0,0,70),'Ferrite plate',V(0,0,0),true);
-// cable runs from the PCB and leaves through the cut-out in the centre of the left edge
-const cable=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(-84,0,-4.4),V(-92,0,-4.4),V(-104,0,-5),V(-124,6,-6),V(-146,22,-7)]),60,1.6,10),new THREE.MeshStandardMaterial({color:0x1b2a6b,roughness:.5}));
-root.add(cable);
+// white charging cover with the 25W print, flush with the holder's top face (z 6.5), fills the r 32.3 opening
+function coverTex(){const c=document.createElement('canvas');c.width=c.height=1024;const x=c.getContext('2d');
+ x.fillStyle='#f4f6f8';x.fillRect(0,0,1024,1024);const blue='#2b3f9e';
+ x.strokeStyle=blue;x.lineWidth=5;x.beginPath();x.arc(512,512,250,0,7);x.stroke();
+ x.font='italic 700 190px "Arial Black",Arial,sans-serif';x.textAlign='center';x.textBaseline='alphabetic';
+ x.lineWidth=7;x.strokeStyle=blue;x.strokeText('25',470,560);
+ x.fillStyle=blue;x.font='italic 800 120px Arial,sans-serif';x.fillText('W',640,470);
+ x.beginPath();x.moveTo(668,500);x.lineTo(628,575);x.lineTo(660,570);x.lineTo(636,640);x.lineTo(700,550);x.lineTo(668,556);x.lineTo(690,500);x.closePath();x.fill();
+ x.font='400 46px Arial,sans-serif';x.fillText('-wireless charging-',512,660);
+ const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;t.center.set(.5,.5);t.rotation=Math.PI/2;t.repeat.set(.8,.8);return t}
+const coverMat=new THREE.MeshStandardMaterial({color:0xf4f6f8,roughness:.35});
+const cover=new THREE.Mesh(new THREE.CylinderGeometry(32.1,32.1,0.9,96),[coverMat,new THREE.MeshStandardMaterial({map:coverTex(),roughness:.35}),coverMat]);
+cover.rotation.x=Math.PI/2;add(cover,V(HC.x,HC.y,6.1),V(0,0,88),'Charging cover · 25W',V(32,0,0));
 // soft contact shadow
 const sc=document.createElement('canvas');sc.width=sc.height=256;const sx=sc.getContext('2d');const g=sx.createRadialGradient(128,128,10,128,128,128);g.addColorStop(0,'rgba(0,0,0,.55)');g.addColorStop(1,'rgba(0,0,0,0)');sx.fillStyle=g;sx.fillRect(0,0,256,256);
 const shadow=new THREE.Mesh(new THREE.PlaneGeometry(300,170),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc),transparent:true,depthWrite:false}));shadow.position.z=-9;scene.add(shadow);
